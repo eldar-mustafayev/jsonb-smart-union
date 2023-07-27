@@ -2,7 +2,7 @@
 
 ![JSONB Union Logo](https://your-domain.com/path/to/logo.png)
 
-JSONB Union is a powerful PostgreSQL extension that allows you to smartly combine two JSONB objects in a way that preserves non-null values, merges arrays, and recursively compares nested objects. This extension is designed to be used as both a standalone function and as an aggregation function with the `GROUP BY` clause.
+JSONB Union is a powerful PostgreSQL extension that allows you to smartly combine two JSONB objects in a way that preserves non-null values, merges arrays, recursively compares nested objects, and drops duplicates. This extension is designed to be used as both a standalone function and as an aggregation function with the `GROUP BY` clause.
 
 ## Table of Contents
 
@@ -20,12 +20,13 @@ JSONB Union is a powerful PostgreSQL extension that allows you to smartly combin
 
 ## Introduction
 
-Working with JSONB data in PostgreSQL can be challenging when you need to merge objects in a way that intelligently handles conflicting values and nested structures. JSONB Union comes to the rescue by providing a simple yet powerful function that smartly combines two JSONB objects, catering to a wide range of scenarios.
+Working with JSONB data in PostgreSQL can be challenging when you need to merge objects in a way that intelligently handles conflicting values, nested structures, and duplicates. JSONB Union comes to the rescue by providing a simple yet powerful function that smartly combines two JSONB objects, catering to a wide range of scenarios.
 
 ## Features
 
 - **Smart Merge**: JSONB Union handles conflicting non-null values by combining them into arrays, preserving both elements.
 - **Recursive Comparison**: When encountering nested JSONB objects, JSONB Union will recursively compare their keys and merge them accordingly.
+- **Duplicate Elimination**: If a field is an array in both objects, JSONB Union will merge and drop duplicates, ensuring unique elements in the resulting array.
 - **Easy Integration**: The extension can be used as both a standalone function and an aggregation function with `GROUP BY`.
 - **High Performance**: JSONB Union is optimized for performance, ensuring efficient operations on large datasets.
 - **Fully Customizable**: As an open-source project, you can modify and adapt JSONB Union to suit your specific needs.
