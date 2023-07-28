@@ -1,6 +1,5 @@
 # JSONB Union - Smart Combine PostgreSQL Extension
 
-![JSONB Union Logo](https://your-domain.com/path/to/logo.png)
 
 JSONB Union is a powerful PostgreSQL extension that allows you to smartly combine two JSONB objects in a way that preserves non-null values, merges arrays, recursively compares nested objects, and drops duplicates. This extension is designed to be used as both a standalone function and as an aggregation function with the `GROUP BY` clause.
 
@@ -31,29 +30,20 @@ Working with JSONB data in PostgreSQL can be challenging when you need to merge 
 - **High Performance**: JSONB Union is optimized for performance, ensuring efficient operations on large datasets.
 - **Fully Customizable**: As an open-source project, you can modify and adapt JSONB Union to suit your specific needs.
 
+![GitHub](https://img.shields.io/github/license/eldar-mustafayev/jsonb_smart_union)
+
 ## Installation
 
-To use JSONB Union, follow these simple steps to install the extension in your PostgreSQL database.
+To install the extension, follow these steps:
 
-1. Clone the JSONB Union repository from GitHub.
-2. Navigate to the project directory.
+1. Download the latest release of the extension as a single SQL script (`jsonb_smart_union--1.0.sql`) from this repository.
 
-```bash
-git clone https://github.com/your-username/jsonb-union.git
-cd jsonb-union
+2. Connect to your PostgreSQL database using the `psql` command or any other PostgreSQL client tool.
+
+3. Execute the SQL script within your database to create the `jsonb_union` function:
+
 ```
-
-3. Build and install the extension.
-
-```bash
-make
-sudo make install
-```
-
-4. Ensure that the extension is properly loaded in your PostgreSQL database.
-
-```sql
-CREATE EXTENSION IF NOT EXISTS jsonb_union;
+\i path/to/jsonb_smart_union--1.0.sql
 ```
 
 Congratulations! You have successfully installed JSONB Union in your PostgreSQL environment.
@@ -111,7 +101,7 @@ We welcome contributions to JSONB Union! If you find a bug, have an enhancement 
 
 ## License
 
-JSONB Union is released under the MIT License. See [LICENSE](LICENSE) for more details.
+JSONB Union is released under the MIT License. See [LICENSE](https://github.com/eldar-mustafayev/jsonb_smart_union/blob/main/README.md) for more details.
 
 ---
 
